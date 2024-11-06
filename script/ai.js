@@ -31,5 +31,4 @@ Example: ${api.prefix + name} what is love?`);
     } catch (err) {
       send(err.message || err);
     }
-  }
-};
+  };
