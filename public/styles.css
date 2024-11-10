@@ -14,6 +14,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+/* Rainbow effect applied to container */
 .container {
     background-color: #ffffff;
     border-radius: 10px;
@@ -21,6 +22,8 @@ body {
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    border: 5px solid;
+    border-image: linear-gradient(45deg, gray, indigo, black) 1;
 }
 
 h1 {
@@ -139,6 +142,45 @@ label {
     border: none !important;
 }
 
-#listOfCommands:not(.modal), #listOfCommandsEvent:not(.modal), #prefixOfCommands:not(.modal), #adminOfCommands:not(.modal) {
+#listOfCommands
+:not(.modal), #listOfCommandsEvent:not(.modal), #prefixOfCommands:not(.modal), #adminOfCommands:not(.modal) {
     box-shadow: none !important;
+}
+
+/* Positioning the submit button just above the uid field */
+#submitButton {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    animation: pulseAnimation 2s infinite; /* Added pulse animation */
+}
+
+/* Pulse animation for submit button */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly enlarge the button */
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    }
+}
+
+/* Optional: Adding a shake effect if you want it to shake instead of pulse */
+@keyframes shakeAnimation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* If you want the button to shake instead of pulsing, you can uncomment this line: */
+#submitButton {
+    animation: shakeAnimation 0.5s ease infinite;
 }

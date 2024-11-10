@@ -4,6 +4,7 @@ const name = "ai";
 module.exports.config = {
   name,
   description: "Interact with ChatGPT-4o",
+}
   module.exports.run = async function({ api, event, send, args }) {
     const prompt = args.join(" ");
     
