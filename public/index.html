@@ -10,58 +10,6 @@
    <style>
       .pink-text { color: pink; }
       .red-text { color: red; }
-
-      /* Animation for the "Appstate" text */
-      @keyframes pulseAppstate {
-         0% {
-            transform: scale(1);
-         }
-         50% {
-            transform: scale(1.1);
-         }
-         100% {
-            transform: scale(1);
-         }
-      }
-
-      .animated-appstate {
-         animation: pulseAppstate 1.5s infinite;
-         color: #FF69B4;  /* You can adjust the color if needed */
-         font-weight: bold;
-      }
-
-      .animated-text {
-         animation: pulse 1.5s infinite;
-      }
-
-      .animated-facebook {
-         animation: pulseFacebook 1.5s infinite;
-      }
-
-      /* Example for animation on ping and time */
-      @keyframes pulse {
-         0% {
-            opacity: 0.5;
-         }
-         50% {
-            opacity: 1;
-         }
-         100% {
-            opacity: 0.5;
-         }
-      }
-
-      @keyframes pulseFacebook {
-         0% {
-            transform: scale(1);
-         }
-         50% {
-            transform: scale(1.05);
-         }
-         100% {
-            transform: scale(1);
-         }
-      }
    </style>
 </head>
 <body>
@@ -103,11 +51,11 @@
    </nav>
 
    <div class="container">
-      <h1 class="col text-center red-text animated-appstate" style="font-size: 15px; padding: 10px;">Appstate</h1>
+      <h1 class="col text-center red-text" style="font-size: 20px; padding: 10px;">Appstate</h1>
       <form id="json-form" onsubmit="submitForm(event)">
          <div class="row">
             <div class="col-md-12">
-               <textarea id="json-data" class="form-control centered-textarea center-placeholder" placeholder=""></textarea>
+               <textarea id="json-data" class="form-control centered-textarea center-placeholder" placeholder="Enter your appstate here..."></textarea>
             </div>
          </div>
       </form>
