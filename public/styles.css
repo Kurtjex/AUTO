@@ -1,10 +1,17 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
 /* Rainbow background effect */
 body {
     padding: 20px;
     background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 400% 400%;
     animation: rainbowBackground 10s ease infinite;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* Animasyon para sa rainbow effect */
@@ -26,12 +33,18 @@ body {
     border-image: linear-gradient(45deg, gray, indigo, black) 1;
 }
 
+/* Appstate box adjustments */
 h1 {
     color: #343a40;
+    text-align: center;
+    font-size: 24px; /* Increase size of Appstate title */
+    margin-bottom: 15px;
 }
 
-label {
-    color: #495057;
+/* Styling for the Appstate section */
+#json-form {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .centered-textarea {
@@ -44,12 +57,14 @@ label {
     border: 1px solid #ced4da;
     border-radius: 5px;
     resize: none;
+    text-align: center;
 }
 
 .center-placeholder::placeholder {
     text-align: center;
 }
 
+/* Button Styling */
 .btn-primary {
     background-color: #007bff;
     border: 1px solid #007bff;
@@ -65,6 +80,7 @@ label {
     margin-top: 10px;
 }
 
+/* Footer */
 .footer {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
@@ -85,6 +101,7 @@ label {
     margin-right: 30px;
 }
 
+/* Container for buttons */
 .container-buttons {
     margin-top: 20px;
     text-align: center;
@@ -94,12 +111,14 @@ label {
     margin: 5px;
 }
 
+/* Styling for result box */
 #result {
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
 }
 
+/* Form check box styling */
 .form-check {
     display: flex;
     margin-top: 10px;
@@ -123,10 +142,7 @@ label {
     opacity: 0;
 }
 
-.disable {
-    display: none;
-}
-
+/* Inputs for Prefix and Admin */
 #inputOfPrefix, #inputOfAdmin {
     padding: 13px;
     width: 200px;
@@ -138,6 +154,7 @@ label {
     background-color: #fff;
 }
 
+/* List command and event styling */
 #listOfCommands, #listOfCommandsEvent, #prefixOfCommands, #adminOfCommands {
     border: none !important;
 }
@@ -147,7 +164,7 @@ label {
     box-shadow: none !important;
 }
 
-/* Positioning the submit button just above the uid field */
+/* Submit Button */
 #submitButton {
     margin-top: 20px;
     width: 100%;
@@ -193,6 +210,7 @@ label {
     align-items: center;
     gap: 10px;
     text-decoration: none;
+    animation: facebookPulseAnimation 2s infinite; /* Added pulse animation */
 }
 
 .btn-facebook i {
@@ -213,7 +231,28 @@ label {
     100% { transform: scale(1); box-shadow: 0 0 10px rgba(66, 103, 178, 0.5); }
 }
 
-/* Apply pulse animation to Facebook button */
-.btn-facebook {
-    animation: facebookPulseAnimation 2s infinite;
-                                                        }
+/* Animation for Time and Ping Text */
+@keyframes timePingAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+}
+
+#time, #ping {
+    animation: timePingAnimation 2s ease-in-out infinite;
+}
+
+/* Centered content for Appstate section */
+#json-form {
+    text-align: center;
+    margin-top: 20px;
+}
