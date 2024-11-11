@@ -46,6 +46,10 @@ label {
     resize: none;
 }
 
+.center-placeholder::placeholder {
+    text-align: center;
+}
+
 .btn-primary {
     background-color: #007bff;
     border: 1px solid #007bff;
@@ -94,10 +98,6 @@ label {
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
-}
-
-.center-placeholder::placeholder {
-    text-align: center;
 }
 
 .form-check {
@@ -180,7 +180,40 @@ label {
     100% { transform: translateX(0); }
 }
 
-/* If you want the button to shake instead of pulsing, you can uncomment this line: */
-#submitButton {
-    animation: shakeAnimation 0.5s ease infinite;
+/* Facebook button styling */
+.btn-facebook {
+    background: linear-gradient(45deg, #4267B2, #3b5998, #1e3a73);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn-facebook i {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.btn-facebook:hover {
+    background: linear-gradient(45deg, #1e3a73, #3b5998, #4267B2);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Facebook button pulse animation */
+@keyframes facebookPulseAnimation {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(66, 103, 178, 0.5); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(66, 103, 178, 0.7); }
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(66, 103, 178, 0.5); }
+}
+
+/* Apply pulse animation to Facebook button */
+.btn-facebook {
+    animation: facebookPulseAnimation 2s infinite;
 }
